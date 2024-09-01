@@ -1,0 +1,14 @@
+[package]
+name = "jj-gui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+jj-cli = { git = "https://github.com/martinvonz/jj.git", rev = "dbb579adec42946ecb2877abb93915a879a2c4ce" }
+
+[dependencies.gpui]
+git = "https://github.com/zed-industries/zed.git"
+version = "0.1.0"
+# runtime_shaders flag needed to compile shaders at runtime in isolated build environments; avoids needing Metal SDK
+features = ['runtime_shaders']
+rev = "d682594c4aff3a827f54a4aaffba4704bb61d684"
